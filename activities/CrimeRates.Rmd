@@ -45,6 +45,7 @@ crimes_with_rates <- crimes |> mutate(violent_rate = violent_crime_total/populat
 
 Write a few sentences about what you found in the data. What years had the highest crime rates? What years had the lowest crime rates? Does the pattern match your expectations?
 
+The data showed that there was a huge increase in the crime rate in the 90s where the violent crime rate grew all the way to 99.981 in 1992. The crime rate has steadily went down since the boom in the 90s with recent years having the lowest crime rates since the data started in 1975. The data also just showed that the crime rate steadily increased until its boom in the 90s and then it went steadily back down in the 2000s. It does match my expectations because I knew that Baltimore suffered with a lot of violent crime, even now, so I will say that I am pretty surprised by just how low the violent crime rate has gotten. 
 
 When you are done, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
 
