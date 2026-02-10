@@ -37,7 +37,7 @@ team_aces |> mutate(percentile = ntile(total_aces, 100))
 
 Write a couple of sentences that puts Maryland into context with the other teams in the dataset. You can do some Internet research to help with this.
 
-
+Maryland had more aces than 95% of teams and was one of the highest high-major teams in aces totals and they were 40 aces behind the top team, UTEP. It is pretty out of the ordinary because most of the top teams were a lot better performing, like UTEP who topped the aces leaderboard was 27-6 compared to Maryland's 14-17 and Pittsburgh, who was higher then Maryland, who made it to the final four. 
 
 When you are done, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
 
