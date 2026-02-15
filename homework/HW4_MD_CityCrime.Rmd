@@ -65,3 +65,53 @@ Ocean City saw an 82.4% increase in crime from 2019 to 2020 as they finish the y
 ### Task 9: Save Your Work and Put it on GitHub
 
 Save this notebook, then commit it to your local repository. Push the changes to your GitHub repository and submit the URL for this file in ELMS.
+
+
+### Task 10: Using the 2020 violent crime rate, calculate the percentiles using `ntile()`. Save the results to a new dataframe called `md_cities_percentiles`. How many cities are above the 90th percentile? Calculate the Interquartile Range of the 2020 violent crime rate using `summarize()` and R's `IQR()` function. The syntax is similar to how `mean()` works. Do the results change your best story idea from the previous assignment? Why or why not?
+
+```{r}
+md_cities_percentiles <- MD_cities_rates |>
+  mutate(violent_percentile_2020 = ntile(violent_rate_2020, 100),)
+summarise(violent_percentile_2020 >90)
+```
+```{r}
+md_cities_percentiles <- MD_cities_rates |>
+  mutate(violent_percentile_2020 = ntile(violent_rate_2020, 100),)
+```
+
+```{r}
+md_cities_percentiles |>
+  summarize(violent_percentile_2020 >90)
+
+tbl_df |>
+  sum(igl = TRUE)
+```
+
+```{r}
+md_cities_percentiles <- MD_cities_rates |>
+  mutate(violent_percentile_2020 = ntile(violent_rate_2020, 100),)
+
+md_cities_percentiles |>
+  summarize(violent_percentile_2020 >90)
+
+md_cities_percentiles |> 
+  summarize(count = sum(violent_percentile_2020 >90))
+
+MD_cities_rates |>
+  IQR(violent_rate_2020, na.rm = TRUE)
+```
+
+```{r}
+md_cities_percentiles <- MD_cities_rates |>
+  mutate(violent_percentile_2020 = ntile(violent_rate_2020, 100),)
+
+md_cities_percentiles |>
+  summarize(violent_percentile_2020 >90)
+
+md_cities_percentiles |> 
+  summarize(count = sum(violent_percentile_2020 >90))
+
+  IQR(MD_cities_rates$violent_rate_2020, na.rm = TRUE)
+```
+
+The amount of cities in the 90th percentile of crime is 10, and the interquartile range of the 2020 violent crime rate is 41.98895. I added a lot of code because there were points where I was struggling and needed to look up help and i would create a new line of code for that. I think that another big story could be about where the majority of crime is taking place in Maryland since there is four of the 10 cities that are on the eastern shore of Maryland, I think that is worth a story.
