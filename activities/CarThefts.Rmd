@@ -46,6 +46,6 @@ car_thefts |>
 
 Is the distribution normal or skewed in one direction? Write a sentence in which you describe the range of the data covered by one standard deviation from the mean on both sides - how much of the data falls in that range?
 
-
+It is close to a normal distribution as the mode is close to the mean and the bunch of the data is bunched up within the standard deviation. To assign a precentage to it, I would say its 67% or two-thirds normal. The data falls between 20 and 3 and around 24 of the 31 days fall within the standard deviation ~8-~17.
 
 When you are done, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
