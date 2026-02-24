@@ -74,7 +74,7 @@ summary(daily_calls$call_count)
 
 Let's visualize the time series of daily calls. What patterns do you see? If you had to draw horizontal lines that would highlight unusual days, where would those lines be?
 
-ANSWER HERE
+There is a large variety day-to-day with some days being unusually high and some days being unusually low. The lines would average out to around eight and the largest line would be at 23.
 
 ```{r daily-calls-plot}
 # Plot daily call volume
@@ -137,7 +137,7 @@ unusual_days |>
 
 Let's visualize these unusual days in the context of the full dataset. How do they differ from your answer on Task 3?
 
-ANSWER HERE
+A lot of the unusual days come out of the blue, with spikes coming in similar areas like August and July. The unusual days are typically unrelated with the seasons.
 
 ```{r plot-unusual-days}
 # Create a clean factor for the plot legend
@@ -298,5 +298,5 @@ top_outliers |> kable(digits = 2)
 
 Based on our z-score analysis, what are some potential angles for reporting? What would your next steps be and what would you tell an editor about your findings?
 
-ANSWER HERE
+I think that angles talking about addiction in the county could be good because a lot of calls over overdose happening throughout the week would indicate a consistent use of drugs. Another angle can be talking about when the highest amount of overdoses occur, like with the jump in July, and a lot of calls on New Years day. Another thing that can be talked about is the spikes that could be correlated to a single batch of drugs. 
 
