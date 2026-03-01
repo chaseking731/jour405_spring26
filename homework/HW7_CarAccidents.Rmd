@@ -75,7 +75,7 @@ ggplot(accidents, aes(x = date, y = total)) +
 ### Task 1 (3 points)
 Looking at the time series visualization above, identify at least two noticeable patterns or anomalies. What questions would you want to investigate further based on this initial view of the data? How might these visual patterns translate into potential story angles?
 
-ANSWER HERE
+There is a very noticeable dip in accidents as the COVID-19 pandemic started in 2020. Another thing that I noticed is that besides the dip in 2020 the amount of accidents seem to be rising throughout the years.
 
 The daily data is quite noisy, so let's also look at weekly patterns:
 
@@ -114,7 +114,7 @@ ggplot(accidents, aes(x = day_of_week, y = total)) +
 ### Task 2 (2 points)
 Based on the day-of-week analysis, which day(s) have the highest and lowest average accidents? Why might these patterns exist?
 
-ANSWER HERE
+Wednesday has the least amount of accidents with Monday being a very close second. Friday and Saturday have the highest amount of accidents. I think that could be because more people are on the roads as well as more people are partying and therefor more people would be driving impaired. 
 
 ## Calculating Z-Scores
 
@@ -161,7 +161,7 @@ unusual_days |>
 ### Task 3 (3 points)
 Choose one of the top 10 unusual days and research what might have happened on that date. Look for weather events, holidays, major incidents, or other factors that could explain the unusual number of accidents. Briefly describe your findings and how you would incorporate this context into a story.
 
-ANSWER HERE
+For the day with the most accidents, 2021-10-29, it was the Friday before Halloween which would result in more people partying then normal. Along with that there was a lot of rain throughout the day which would also contribute to worse road conditions. So with the extra partying, the road conditions, and people going to work/school would be the top causes for the unusually high total.
 
 Let's visualize these unusual days:
 
@@ -210,7 +210,9 @@ unusual_dow |>
 ### Task 4 (3 points)
 Compare the days that have extreme z-scores overall versus those with extreme day-of-week z-scores. How do these lists differ? What journalistic insights can you draw from comparing these two different approaches to measuring "unusual" days?
 
-ANSWER HERE
+The top of the list is still 2022-10-29 as the sheer number of accidents leads to a large Z score no matter what. Outside of that there are much more weekdays like Wednesday--which was the day with the lowest average of accidents--and Tuesdays and Thursdays. 
+
+By comparing the two different approaches can help layer context on how crazy the data really is. Whether what happened is a newsworthy event, or whether a newsworthy event was the cause of the unusual day. 
 
 Let's see how many unusual days we have for each day of the week:
 
@@ -289,7 +291,7 @@ unusual_monthly |>
 ### Task 5 (2 points)
 Based on the monthly pattern analysis, which months have the highest and lowest average accidents? Develop a hypothesis about why these seasonal patterns exist.
 
-ANSWER HERE
+October has the highest number of accidents while November and January along with the summer months all have high totals as well. I think for October it has a lot to do with the weekend surronding Halloween and for the winter months and summer months it has a lot to do with Summer and Winter Break for students.
 
 ## Identifying Extreme Outliers
 
@@ -314,9 +316,19 @@ if(nrow(extreme_outliers) > 0) {
 ### Task 6 (2 points)
 For the extreme outliers identified (z-scores beyond ±3), what do they have in common?
 
-ANSWER HERE
+Most of them are extremely high rather then unusually low. A lot of them are in 2021, when the world opened back up from the pandemic. All of them are in the weekend, or a day removed from the weekend.
 
 ## Your Best Story Pitch
 
 ### Task 7 (5 points)
 Based on all the analyses performed, craft your best story pitch, including a headline and lede. Be sure to include what kinds of sources/people you'd talk to for the story.
+
+Story: Prince George's County sees large increases in accidents around Halloween 
+
+Headline: Prince George's County sees spike in crashes during 'Halloweekend' 
+
+Lede: October is the leading month in accidents for Prince George's County and Halloweekend is the main contributor.
+
+Sources: You'd want to talk to the Prince George's County Police Department about the increase in accidents see if they have any incite about the weekend.
+
+You'd probably want to talk to PG county hospitals or EMS about its preperations for Halloween/their experiences with accidents around Halloween. 
