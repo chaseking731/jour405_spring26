@@ -1,0 +1,46 @@
+
+h1 {
+font-family: "IBM Plex Sans", sans-serif;
+}
+
+p {
+font-family: "Roboto", sans-serif;
+}
+
+
+.mainHeadline{
+font-family: "Roboto", sans-serif;
+text-align: center;
+}
+
+.juxtapose{
+margin-left: auto;
+margin-right: auto;
+}
+
+
+.text{
+	text-align: center;
+	align-items: center;
+
+}
+
+.roboto-<uniquifier> {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+.ibm-plex-sans-<uniquifier> {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
