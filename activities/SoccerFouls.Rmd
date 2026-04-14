@@ -49,5 +49,21 @@ matches |>
 
 ### Task 6: Describe the results of both the correlation calculation and the scatterplot.
 
+The correlation calculation was 0.018 which showed that there was very little correlation to the amount of fouls a team commits to their goal differential. That means that there is almost 2% correlation between fouling and goal differential. The scatterplot showed an almost flat line which showed that there was near to no correlation.
+
+### task 7 chose another variable and repeat the steps
+
+```{r}
+matches |> summarize(correlation = cor(corners, goal_diff, method="pearson"))
+```
+
+```{r}
+matches |> 
+  ggplot() +
+  geom_point(aes(x=goal_diff, y=corners)) +
+  geom_smooth(aes(x=goal_diff, y=corners), method="lm")
+```
+
+The correlation between the amount of corner kicks that a team has and their goal differentation does have a much more meaningful positive correlation then the amount of fouls that they commit, but it is not a dominant factor.
 
 When you are done, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
