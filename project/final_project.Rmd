@@ -1,0 +1,21 @@
+---
+title: "final_project"
+output: html_document
+author: Chase King
+---
+Sources: 
+2025 fall -> https://nacda.com/documents/2026/1/20/25.26DI_FinalFallConf.pdf 
+2025 winter -> https://nacda.com/documents/2026/4/7/25.26DI_WinterConf_4.9.pdf 
+Big ten athletic expenses -> https://www.extrapointsmb.com/p/oh-hey-lets-look-at-some-fy25-big-ten-athletic-budget-numbers, https://www.nytimes.com/athletic/7071017/2026/02/26/big-ten-financial-reports-2025/ 
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+fall_rankings <- read_csv("https://raw.githubusercontent.com/chaseking731/jour405_spring26/refs/heads/main/project/NACDA_Directors_Cup_Standings_Fall_2025(Table001%20(Page%201-3)).csv")
+winter_rankings <- read_csv("https://raw.githubusercontent.com/chaseking731/jour405_spring26/refs/heads/main/project/NACDA_Directors_Cup_standings_Winter_2025-26(Table001%20(Page%201-4)).csv")
+bigten_athletic_expenses <- read_csv("https://raw.githubusercontent.com/chaseking731/jour405_spring26/refs/heads/main/project/Big_Ten_Program_Budget_25Y(Sheet1).csv")
+```
+
+Right now I have the data from the fall 2025-26 and winter 2025-26 NACDA Director's Cup Standings. I think that in the future when I am working with the data I might decide to go further back to collect more data. With winter_rankings and fall_rankings I will be able to filter out big ten teams and put together entire rankings to compare athletic programs. With the bigten_athletic_expenses I will be able to compare schools athletic expenses to their athletic program status as found with the winter_rankings and fall_rankings.
