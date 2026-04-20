@@ -7,6 +7,14 @@ Sources:
 2025 fall -> https://nacda.com/documents/2026/1/20/25.26DI_FinalFallConf.pdf 
 2025 winter -> https://nacda.com/documents/2026/4/7/25.26DI_WinterConf_4.9.pdf 
 Big ten athletic expenses -> https://www.extrapointsmb.com/p/oh-hey-lets-look-at-some-fy25-big-ten-athletic-budget-numbers, https://www.nytimes.com/athletic/7071017/2026/02/26/big-ten-financial-reports-2025/ 
+possible tests:
+standard deviation (mean of big ten rankings)
+boxplot graph of standard deviation 
+correlation between rankings and expenses 
+scatterplot of correlation between rankings and expenses 
+Linear Regression
+Significance testing 
+
 
 ```{r}
 library(tidyverse)
