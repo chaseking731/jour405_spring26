@@ -21,9 +21,81 @@ library(tidyverse)
 ```
 
 ```{r}
-fall_rankings <- read_csv("https://raw.githubusercontent.com/chaseking731/jour405_spring26/refs/heads/main/project/NACDA_Directors_Cup_Standings_Fall_2025(Table001%20(Page%201-3)).csv")
-winter_rankings <- read_csv("https://raw.githubusercontent.com/chaseking731/jour405_spring26/refs/heads/main/project/NACDA_Directors_Cup_standings_Winter_2025-26(Table001%20(Page%201-4)).csv")
+college_athletic_rankings <- read_csv("https://raw.githubusercontent.com/chaseking731/jour405_spring26/refs/heads/main/project/Directors_Cup_Rankings.csv")
 bigten_athletic_expenses <- read_csv("https://raw.githubusercontent.com/chaseking731/jour405_spring26/refs/heads/main/project/Big_Ten_Program_Budget_25Y(Sheet1).csv")
 ```
+
+```{r}
+college_athletic_rankings |>
+  group_by(Conference) |>
+  summarise(
+    mean_total_points = mean(Total_Points),
+    sd_total_points   = sd(Total_Points),
+  )
+```
+This allows me to view the mean and standard deviation between different colleges and allows me to compare them in the future. I wanted to have data to compare to use to compare the big ten with other conferences. 
+
+```{r}
+combined_data <- college_athletic_rankings |>
+  inner_join(bigten_athletic_expenses, by = c("Institution" = "College"))
+```
+
+I used AI to figure out gow to combine the two with "Institution and College being different. Link: https://chatgpt.com/share/69f02c63-e984-83ea-b995-0f9a2542d034 
+
+```{r}
+bigten_data <- combined_data |>
+  filter(Conference == "Big Ten")
+```
+
+This just combines the data of only the big ten schools into a dataset for future use. 
+
+```{r}
+summary(bigten_data$`Total_Points`)
+bigten_data |> arrange(desc(`Total_Points`)) |> head(10)
+```
+
+This shows some data from the bigten_data dataset. 
+
+
+```{r}
+bigten_data |>
+  summarise(
+    mean_total_points = mean(Total_Points),
+    sd_total_points   = sd(Total_Points)
+  )
+```
+
+This just gives me data about the mean from the big ten schools and the standard deviation.
+
+```{r}
+bigten_data |> summarize(correlation = cor(Total_Points, Expenses, method="pearson",))
+```
+
+This is not working with the data, it is saying that the data must be numerical. All of the data that is invovled with the code is numerical so I am not sure what it means. 
+
+
+```{r}
+bigten_data |>
+  ggplot(aes(x = `Rank`, y = `Expenses`)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  labs(x = "Athletic Ranking", y = "Expenses",
+       title = "Big Ten Schools Division 1 Athletic Ranking vs Athletic Expenses")
+```
+
+The code ran but it is completely unreadable. The expenses just show up as one datapoint. I think I need to set bounds for the X and Y axis but I am not sure how to do that. 
+
+```{r}
+bigten_data |>
+  ggplot(aes(x = `Total_Points`, y = `Expenses`)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  labs(x = "Total Director Cup Points", y = "Expenses",
+       title = "Big Ten Schools Division 1 Director Cup Points vs Athletic Expenses")
+```
+This is also unreadable because of the lack of bounds on the Y axis. But I think that it will be helpful once I have the bounds correct to see if there is a correlation between the total expenses and the total director cup points. 
+
+
+
 
 Right now I have the data from the fall 2025-26 and winter 2025-26 NACDA Director's Cup Standings. I think that in the future when I am working with the data I might decide to go further back to collect more data. With winter_rankings and fall_rankings I will be able to filter out big ten teams and put together entire rankings to compare athletic programs. With the bigten_athletic_expenses I will be able to compare schools athletic expenses to their athletic program status as found with the winter_rankings and fall_rankings.
