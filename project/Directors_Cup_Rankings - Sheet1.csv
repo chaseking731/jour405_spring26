@@ -1,0 +1,260 @@
+Rank,Institution,Conference,Division,Total_Points,Winter_Total ,Fall_Total
+1,North Carolina,ACC,FBS,781.5,422.5,359
+2,Stanford,ACC,FBS,746.25,399.75,346.5
+3,Virginia,ACC,FBS,696.75,357.25,339.5
+4,Princeton,Ivy League,FCS,679.5,414.5,265
+5,Ohio State,Big Ten,FBS,664,517.5,146.5
+6,Penn State,Big Ten,FBS,645,405.5,239.5
+7,Notre Dame,ACC,FBS,644,343,301
+8,Duke,ACC,FBS,638.5,381.5,257
+9,Michigan,Big Ten,FBS,624,454,170
+10,Texas,SEC,FBS,589.5,426.5,163
+11,Alabama,SEC,FBS,589.25,338.25,251
+12,North Carolina State,ACC,FBS,549.5,314.5,235
+13,Iowa,Big Ten,FBS,541.5,389.5,152
+14,Louisville,ACC,FBS,538,331,207
+15,Wisconsin,Big Ten,FBS,526,290,236
+16,Texas A&M,SEC,FBS,507,266.5,240.5
+17,Florida,SEC,FBS,491.75,366.75,125
+18,Minnesota,Big Ten,FBS,487.25,350.25,137
+19,Kentucky,SEC,FBS,485,345,140
+20,Nebraska,Big Ten,FBS,484.25,386.25,98
+21,BYU,Big 12,FBS,479.25,169.75,309.5
+22,UCLA,Big Ten,FBS,473.5,248.5,225
+23,Oregon,Big Ten,FBS,470,230,240
+24,Georgia,SEC,FBS,469,319,150
+25,USC,Big Ten,FBS,463,270,193
+26,Indiana,Big Ten,FBS,460.5,246.5,214
+27,Harvard,Ivy League,FCS,459.5,306.5,153
+28,Tennessee,SEC,FBS,447,301,146
+29,Iowa State,Big 12,FBS,437.75,248.75,189
+30,Washington,Big Ten,FBS,431.75,158.75,273
+31,Arkansas,SEC,FBS,424,290,134
+32,TCU,Big 12,FBS,420,242,178
+33,Illinois,Big Ten,FBS,398.5,324.5,74
+34,West Virginia,Big 12,FBS,393,224,169
+35,Ole Miss,SEC,FBS,392.75,255.75,137
+36,Uconn,Big East,FBS,387,233,154
+37,Colorado,Big 12,FBS,380.5,136,244.5
+38,LSU,SEC,FBS,380,240,140
+38,Northwestern,Big Ten,FBS,380,154,226
+40,Oklahoma State,Big 12,FBS,372,207.5,164.5
+41,South Carolina,SEC,FBS,371,286,85
+42,Yale,Ivy League,FCS,369,216,153
+43,Texas Tech,Big 12,FBS,352.5,230.5,122
+44,Pennsylvania,Ivy League,FCS,320,320,0
+45,Purdue,Big Ten,FBS,318,245,73
+46,Vanderbilt,SEC,FBS,315,154,161
+47,New Mexico,Mountain West,FBS,314.75,119.75,195
+48,Arizona,Big 12,FBS,305.5,230.5,75
+48,Virginia Tech,ACC,FBS,305.5,244,61.5
+50,Utah,Big 12,FBS,303,159.5,143.5
+51,Oklahoma,SEC,FBS,301.5,174,127.5
+52,Miami (FL),ACC,FBS,299,159,140
+53,Kansas,Big 12,FBS,295.5,167.5,128
+54,Pittsburgh,ACC,FBS,267.75,159.75,108
+55,Arizona State,Big 12,FBS,267,178,89
+56,Michigan State,ACC,FBS,266,114,152
+57,Villanova,Big 12,FCS,265,106,159
+58,Wake Forest,Big East,FBS,257.5,0,257.5
+59,Baylor,ACC,FBS,255,141,114
+60,Syracuse,Big 12,FBS,248,50,198
+61,SMU,ACC,FBS,243,56,187
+62,Georgetown,Big East,FCS,242.5,242.5,0
+63,Florida State,ACC,FBS,241.5,141.5,100
+64,Columbia,Ivy League,FCS,237,237,0
+65,Auburn,SEC,FBS,235.5,235.5,0
+66,Northern Arizona,Big Sky,FCS,235,94,141
+67,Missouri,SEC,FBS,233.5,162.5,71
+68,St. John's (NY),Big East,DI,222,197,25
+69,Clemson,ACC,FBS,216.75,116.75,100
+70,Washington State,Pac-12,FBS,215.5,66.5,149
+71,Air Force,Mountain West,FBS,215,161,54
+72,High Point,Big South,DI,214.5,100.5,114
+73,California,ACC,FBS,211.5,186.5,25
+74,Kansas State,Big 12,FBS,199.5,149.5,50
+75,Lehigh,Patriot,FCS,190,137,53
+76,Montana State,Big Sky,FCS,180,80,100
+77,Cornell,Ivy League,FCS,169,119,50
+78,Army West Point,Patriot,FBS,165,67,98
+78,Boston College,ACC,FBS,165,120,45
+80,Maryland,Big Ten,FBS,164,91,73
+81,Tarleton State,WAC,FCS,162.5,92.5,70
+82,South Dakota State,Summit,FCS,162,59,103
+83,Navy,Patriot,FBS,159,81,78
+84,Utah State,Mountain West,FBS,150,50,100
+84,Vermont,America East,DI,150,100,50
+86,UCF,Big 12,FBS,148.5,48.5,100
+87,Northern Iowa,Missouri Valley,FCS,147.5,97.5,50
+88,Houston,Big 12,FBS,142,87,55
+89,Miami (OH),MAC,FBS,140,50,90
+90,North Dakota State,Summit,FCS,138.5,85.5,53
+91,Tulane,American,FBS,137,0,137
+92,Akron,MAC,FBS,136,63,73
+93,Cincinnati,Big 12,FBS,135,82,53
+93,Denver,Summit,DI,135,85,50
+95,New Hampshire,America East,FCS,133,63,70
+95,Saint Louis,Atlantic 10,DI,133,50,83
+97,South Dakota,Summit,FCS,129.25,59.25,70
+98,Stephen F. Austin,Southland,FCS,127,5,122
+99,California Baptist,WAC,DI,124,50,74
+100,Western Michigan,MAC,FBS,120,0,120
+101,UC San Diego,Big West,DI,118,118,0
+102,Sacred Heart,MAAC,FCS,117,92,25
+103,LIU Brooklyn,NEC,FCS,116,91,25
+104,UTSA,American,FBS,113.5,43.5,70
+105,Georgia Tech,ACC,FBS,111,36,75
+106,Furman,SoCon,FCS,108,25,83
+106,Montana,Big Sky,FCS,108,0,108
+108,Liberty,Conference USA,FBS,104.5,34.5,70
+109,Boise State,Mountain West,FBS,104,0,104
+110,Portland,WCC,DI,100,0,100
+110,Texas State,Sun Belt,FBS,100,30,70
+112,Cal Poly,Big West,FCS,99.5,10.5,89
+113,Eastern Kentucky,ASUN,FCS,98,29,69
+114,Dartmouth,Ivy League,FCS,97,72,25
+115,Fairfield,MAAC,DI,95,25,70
+115,UC Davis,Big West,FCS,95,0,95
+117,Butler,Big East,FCS,92.5,34,58.5
+118,Nevada,Mountain West,FBS,92,92,0
+119,Illinois State,Missouri Valley,FCS,90,0,90
+120,Hofstra,CAA,DI,89,25,64
+120,Utah Valley,WAC,DI,89,39,50
+122,Northeastern,CAA,DI,83,83,0
+123,James Madison,Sun Belt,FBS,79,25,54
+124,Mississippi State,SEC,FBS,78,0,78
+124,Rhode Island,Atlantic 10,FCS,78,25,53
+124,Toledo,MAC,FBS,78,0,78
+127,Lipscomb,ASUN,DI,77,0,77
+128,American,Patriot,DI,75.5,50.5,25
+129,Delaware,Conference USA,FBS,75,30,45
+129,Gonzaga,WCC,DI,75,75,0
+129,Memphis,American,FBS,75,0,75
+129,Presbyterian,Big South,FCS,75,75,0
+129,San Diego,WCC,FCS,75,0,75
+129,South Florida,American,FBS,75,25,50
+129,Xavier,Big East,DI,75,0,75
+136,Lindenwood,OVC,FCS,74,49,25
+137,Creighton,Big East,DI,73,0,73
+138,Ohio,MAC,FBS,72,27,45
+139,Samford,SoCon,FCS,70.5,45.5,25
+140,Arkansas State,Sun Belt,FBS,70,0,70
+140,Hawaii,Big West,FBS,70,25,45
+140,Western Kentucky,Conference USA,FBS,70,0,70
+143,Providence,Big East,DI,69,0,69
+144,Kennesaw State,Conference USA,FBS,68.5,43.5,25
+145,Brown,Ivy League,FCS,67,67,0
+146,Southern Mississippi,Sun Belt,FBS,65.5,40.5,25
+147,Georgia Southern,Sun Belt,FBS,65,20,45
+148,Wyoming,Mountain West,FBS,64.5,64.5,0
+149,Bryant,America East,FCS,64,0,64
+149,Grand Canyon,Mountain West,DI,64,0,64
+149,North Carolina Greensboro,SoCon,DI,64,0,64
+149,Rutgers,Big Ten,FBS,64,64,0
+153,East Carolina,American,FBS,62,45,17
+153,Fresno State,Mountain West,FBS,62,45,17
+155,Quinnipiac,MAAC,DI,60,0,60
+156,Wagner,NEC,FCS,59,0,34
+157,Drexel,CAA,DI,57.5,32.5,25
+158,North Texas,American,FBS,56,11,45
+158,Oregon State,Pac-12,FBS,56,31,25
+160,Fordham,Atlantic 10,FCS,55,0,55
+161,Colorado State,Mountain West,FBS,54,54,0
+162,Abilene Christian,WAC,FCS,53,0,53
+162,Mercer,SoCon,FCS,53,0,53
+162,North Dakota,Summit,FCS,53,0,53
+165,Arkansas Little Rock,OVC,DI,52,52,0
+165,Loyola Chicago,Atlantic 10,DI,52,0,52
+165,Tulsa,American,FBS,52,0,52
+165,Arkansas Little Rock,OVC,DI,52,52,0
+168,NJIT,America East,DI,51,0,51
+169,Elon,CAA,FCS,50,0,50
+169,Fairleigh Dickinson,NEC,DI,50,25,25
+169,Howard,MEAC,FCS,50,0,50
+169,Idaho,Big Sky,FCS,50,0,50
+169,Marquette,Big East,DI,50,0,50
+169,Marshall,Sun Belt,FBS,50,0,50
+169,Missouri State,Conference USA,FBS,50,25,25
+169,Prairie View A&M,SWAC,FCS,50,25,50
+169,Rice,American,FBS,50,0,50
+169,Seton Hall,Big East,DI,50,0,50
+169,Siena,MAAC,DI,50,25,50
+169,Tennessee Tech,OVC,FCS,50,0,50
+169,Troy,Sun Belt,FBS,50,25,50
+169,UMKC,Summit,DI,50,0,50
+169,VCU,Atlantic 10,DI,50,0,50
+169,Wright State,Horizon League,DI,50,25,50
+185,Delaware State,MEAC,FCS,47,0,47
+185,Rider,MAAC,DI,47,0,47
+187,Appalachian State,Sun Belt,FBS,45,25,45
+187,Jacksonville State,Conference USA,FBS,45,0,45
+187,Louisiana Tech,Conference USA,FBS,45,0,45
+187,Old Dominion,Sun Belt,FBS,45,0,45
+187,Saint Joseph's,Atlantic 10,DI,45,0,45
+187,South Carolina State,MEAC,FCS,45,0,45
+193,Iona,MAAC,DI,42,0,42
+194,Northern Colorado,Big Sky,FCS,40,25,40
+195,George Mason,Atlantic 10,DI,39,0,39
+196,Central Michigan,MAC,FBS,35.5,25,35.5
+197,UTRGV,Southland,DI,34.5,0,34.5
+198,Bucknell,Patriot,FCS,32.5,0,32.5
+199,Incarnate Word,Southland,FCS,30,0,30
+199,SIU Edwardsville,OVC,DI,30,0,30
+199,UMBC,America East,DI,30,5,25
+202,Northern Illinois,MAC,FBS,27,27,0
+203,IUPUI,Horizon League,DI,26,26,0
+204,Boston University,Patriot,DI,25,0,25
+204,Campbell,CAA,FCS,25,0,25
+204,Central Arkansas,ASUN,FCS,25,0,25
+204,Central Connecticut State,NEC,FCS,25,0,25
+204,Cleveland State,Horizon League,DI,25,0,25
+204,Coastal Carolina,Sun Belt,FBS,25,0,25
+204,College of Charleston,CAA,DI,25,25,0
+204,Coppin State,MEAC,DI,25,0,25
+204,Dayton,Atlantic 10,FCS,25,0,25
+204,Drake,Missouri Valley,FCS,25,0,25
+204,Eastern Illinois,OVC,FCS,25,0,25
+204,FAU,American,FBS,25,0,25
+204,FIU,Conference USA,FBS,25,0,25
+204,Florida A&M,SWAC,FBS,25,0,25
+204,Grambling State,SWAC,FCS,25,0,25
+204,Holy Cross,Patriot,FCS,25,25,0
+204,Houston Christian,Southland,FCS,25,0,25
+204,Illinois Chicago,Missouri Valley,DI,25,0,25
+204,Jacksonville,ASUN,DI,25,25,0
+204,Lafayette,Patriot,FCS,25,0,25
+204,Lamar,Southland,FCS,25,0,25
+204,Louisiana,Sun Belt,FBS,25,0,25
+204,Maine,America East,FCS,25,0,25
+204,McNeese State,Southland,FCS,25,25,0
+204,Murray State,Missouri Valley,FCS,25,25,0
+204,North Florida,ASUN,DI,25,0,25
+204,Pepperdine,WCC,DI,25,0,25
+204,Queens (N.C.),ASUN,DI,25,25,0
+204,Saint Mary's (CA),WCC,DI,25,25,0
+204,San Diego State,Mountain West,FBS,25,0,25
+204,San Jose State,Mountain West,FBS,25,0,25
+204,Santa Clara,WCC,DI,25,25,0
+204,Southeastern Louisiana,Southland,FCS,25,0,25
+204,Southern,SWAC,FCS,25,25,0
+204,Southern Illinois,Missouri Valley,FCS,25,25,0
+204,St. Thomas,Summit,FCS,25,0,25
+204,Tennessee State,OVC,FCS,25,25,0
+204,UC Irvine,Big West,DI,25,0,25
+204,UNLV,Mountain West,FBS,25,0,25
+204,UTEP,Conference USA,FBS,25,0,25
+204,Western Illinois,OVC,FCS,25,25,0
+204,Wisconsin Green Bay,Horizon League,DI,25,25,0
+204,Wisconsin Milwaukee,Horizon League,DI,25,0,25
+204,Wofford,SoCon,FCS,25,0,25
+204,Youngstown State,Horizon League,FCS,25,0,25
+249,Binghamton,America East,DI,24,24,0
+250,Citadel,SoCon,FCS,23,23,0
+251,Buffalo,MAC,FBS,20,20,0
+251,Gardner-Webb,Big South,FCS,20,20,0
+251,Morgan State,MEAC,FCS,20,20,0
+254,Indiana State,Missouri Valley,FCS,17,17,0
+255,Bellarmine,ASUN,DI,15,15,0
+255,Kent State,MAC,FBS,15,15,0
+255,Tennessee Chattanooga,SoCon,FCS,15,15,0
+258,Richmond,Atlantic 10,FCS,5,5,0
