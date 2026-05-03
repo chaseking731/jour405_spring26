@@ -1,6 +1,6 @@
 ---
 title: "Multiple Regression Analysis: Maryland Voter Turnout"
-name: "YOUR NAME HERE"
+name: "Chase King"
 ---
 
 # Introduction
@@ -26,7 +26,7 @@ head(md_turnout)
 
 Before building our model, let's explore the data to understand the variables and their relationships. Examine the correlation matrix to see how the independent variables relate to each other and to the dependent variable (voter turnout). Which variables seem to be correlated? Are there any that are not correlated at all? Also look at the multiple scatterplots. Which variables seem to have a linear relationship with the dependent variable? Which do not?
 
-ANSWER HERE
+It looks like the percent of the population with a bachelors degree or higher has a high correlation with the voter turn out. A higher average income led to a higher voter turn out rate. It also feels like the older the average age was the higher the turnout was. Population does not have that much of a relationship with voter turn out. 
 
 
 ```{r}
@@ -89,7 +89,7 @@ The coefficients tell us the estimated effect of each independent variable on th
 
 Examine the output of the model, checking the coefficients, residuals, and overall model fit. How well does this multiple variable model predict turnout? Do any of the variables seem to be insignificant? Is this a useful model, based on what you've seen? Why?
 
-ANSWER HERE
+This model is very useful based off the R-squared, the coefficients and p-value. The residual standard error is 0.02174. 
 
 ```{r}
 # Build initial model with all predictors
@@ -103,19 +103,22 @@ summary(initial_model)
 
 Create three alternative models by adding or removing variables to see if we can improve the model's performance. Turnout will always be the dependent variable, but you should alter the independent variables by removing or adding some. Then compare the models using adjusted R-squared values. Are any of the models significantly better than the others?
 
-ANSWER HERE
+None of the models see significant improvements, but model 2, which is all of the variables besides population did improve on the full model and had the highest possible R-squared. Population seemed to be the least important variable, with percent of unemployment being the second less important as it had similar results to income. 
 
 ```{r}
 # Model 2
-model2 <- lm(turnout ~ REPLACE ME, data = md_turnout)
+model2 <- lm(turnout ~ income + pct_bachelors_higher + 
+    pct_unemployed + median_age + pct_white, data = md_turnout)
 summary(model2)
 
 # Model 3
-model3 <- lm(turnout ~ REPLACE ME, data = md_turnout)
+model3 <- lm(turnout ~ income + pct_bachelors_higher + 
+     median_age + pct_white, data = md_turnout)
 summary(model3)
 
 # Model 4
-model4 <- lm(turnout ~ REPLACE ME, data = md_turnout)
+model4 <- lm(turnout ~ income + pct_bachelors_higher + 
+     median_age, data = md_turnout)
 summary(model4)
 
 # Compare models
@@ -144,4 +147,4 @@ ggplot(model_comparison, aes(x = reorder(Model, Adjusted_R_squared), y = Adjuste
 
 Without using the words "multiple regression model", describe how you could use this analysis to cover an election or voter participation story.
 
-ANSWER HERE
+I would say explain what the data told me in terms of expected outcome in each specific region. I would say something like 'using data from Prince George's County, it is expected to see a voter turnout of XXX,XXX." I think that I could also add some more explanation of the data used in the model later in the story, but I think for the beginning of the article that giving them the numbers would be most useful.
