@@ -15,16 +15,20 @@ scatterplot of correlation between rankings and expenses
 Linear Regression
 Significance testing 
 
-
+1.
 ```{r}
 library(tidyverse)
 ```
 
+The tidyverse package is needed to help run different code used throughout the project.
+2.
 ```{r}
 college_athletic_rankings <- read_csv("https://raw.githubusercontent.com/chaseking731/jour405_spring26/refs/heads/main/project/Directors_Cup_Rankings.csv")
 bigten_athletic_expenses <- read_csv("https://raw.githubusercontent.com/chaseking731/jour405_spring26/refs/heads/main/project/Big_Ten_Program_Budget_25Y(Sheet1).csv")
 ```
 
+This opens two data sets. The first one shows the college athletic rankings for every single division 1 team. There is a winter and fall rankings and a total rankings. The second data set shows the Big Ten athletic expenses. 
+3.
 ```{r}
 college_athletic_rankings |>
   group_by(Conference) |>
@@ -33,8 +37,8 @@ college_athletic_rankings |>
     sd_total_points   = sd(Total_Points),
   )
 ```
-This allows me to view the mean and standard deviation between different colleges and allows me to compare them in the future. I wanted to have data to compare to use to compare the big ten with other conferences. 
-
+This allows me to view the mean and standard deviation between different colleges and allows me to compare them in the future. I wanted to have data to compare to use to compare the big ten with other conferences. The data does show me that the Big Ten has the highest average points, with conferences like the ACC and the SEC close behind.
+4.
 ```{r}
 combined_data <- college_athletic_rankings |>
   inner_join(bigten_athletic_expenses, by = c("Institution" = "College"))
@@ -42,40 +46,71 @@ combined_data <- college_athletic_rankings |>
 
 I used AI to figure out gow to combine the two with "Institution and College being different. Link: https://chatgpt.com/share/69f02c63-e984-83ea-b995-0f9a2542d034 
 
+This combines the two data sets. This now has only Big Ten teams in the data, which allows me to run tests between Big Ten schools as well as run comparison tests. 
+5.
 ```{r}
 bigten_data <- combined_data |>
   filter(Conference == "Big Ten")
 ```
 
 This just combines the data of only the big ten schools into a dataset for future use. 
-
+6.
 ```{r}
-summary(bigten_data$`Total_Points`)
-bigten_data |> arrange(desc(`Total_Points`)) |> head(10)
+summary(combined_data$`Total_Points`)
+combined_data |> arrange(desc(`Total_Points`)) |> head(17)
 ```
 
-This shows some data from the bigten_data dataset. 
+This ranks the total points from all the Big Ten teams. It shows Ohio State at the top, along with Penn State and Michigan. Maryland and Rutgers are at the bottom.
 
-
+7.
 ```{r}
-bigten_data |>
+combined_data <- combined_data |>
+  mutate(
+    BigTen_Rank = dense_rank(desc(Total_Points))
+  )
+```
+
+This adds another column to the exisiting combined_data data set that is Big Ten rank. I can use this later on to see if the expenses correlate with how they rank between eachother. 
+
+8.
+```{r}
+combined_data |>
   summarise(
     mean_total_points = mean(Total_Points),
     sd_total_points   = sd(Total_Points)
   )
 ```
 
-This just gives me data about the mean from the big ten schools and the standard deviation.
+This just gives me data about the mean from the big ten schools and the standard deviation. The Mean of total points is 443.72 and the standard deviation si 158.8829.
 
+9.
 ```{r}
-bigten_data |> summarize(correlation = cor(Total_Points, Expenses, method="pearson",))
+combined_data <- combined_data |>
+  mutate(
+    Expenses = as.numeric(gsub("[$,]", "", Expenses))
+  )
+
+combined_data |>
+  summarise(correlation = cor(Total_Points,Expenses, use = "complete.obs", method = "pearson"))
 ```
 
-This is not working with the data, it is saying that the data must be numerical. All of the data that is invovled with the code is numerical so I am not sure what it means. 
-
+This code was failing, before I looked up how to fix the error on google and figured out that I needed to get it read as dollar amounts. Now this shows the correlation between the amount of total directors cup points and expenses to be 62% correlated. 
 
 ```{r}
-bigten_data |>
+combined_data <- combined_data |>
+  mutate(
+    Expenses = as.numeric(gsub("[$,]", "", Expenses))
+  )
+
+combined_data |>
+  summarise(correlation = cor(BigTen_Rank, Expenses, use = "complete.obs", method = "pearson"))
+```
+This shows the correlation calculation between the Big Ten athletic rankings and the athletic expenses from each team. It was calculated to 65% correlation. 
+
+
+11.
+```{r}
+combined_data |>
   ggplot(aes(x = `Rank`, y = `Expenses`)) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE, color = "red") +
@@ -83,19 +118,73 @@ bigten_data |>
        title = "Big Ten Schools Division 1 Athletic Ranking vs Athletic Expenses")
 ```
 
-The code ran but it is completely unreadable. The expenses just show up as one datapoint. I think I need to set bounds for the X and Y axis but I am not sure how to do that. 
+This graphs out the points for the teams athletic rankings and their expenses with a red correlation line. This shows that there is a weak correlation between the schools National athletic ranking and the amount of expenses that they use.
 
+12.
 ```{r}
-bigten_data |>
+combined_data |>
   ggplot(aes(x = `Total_Points`, y = `Expenses`)) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE, color = "red") +
   labs(x = "Total Director Cup Points", y = "Expenses",
        title = "Big Ten Schools Division 1 Director Cup Points vs Athletic Expenses")
 ```
-This is also unreadable because of the lack of bounds on the Y axis. But I think that it will be helpful once I have the bounds correct to see if there is a correlation between the total expenses and the total director cup points. 
+
+
+This graphs the correlation between the total_points from the Directors Cup rankings and the amount of athletic expenses between Big Ten Schools. The correlation is much stronger, showing a positive correlation between the expenses and the total_points gained.
+
+13. 
+```{r}
+combined_data |>
+  ggplot(aes(x = `BigTen_Rank`, y = `Expenses`)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  labs(x = "Total Director Cup Points", y = "Expenses",
+       title = "Big Ten Schools Big Ten Athletic Rankings vs Athletic Expenses")
+```
+
+This graphs the correlation between the teams Big Ten athletic rankings and the amount of athletic expenses between Big Ten Schools. The correlation is once again stronger, showing a positive correlation between the expenses and their standings on the Big Ten athletic rankings.
+
+14.
+```{r}
+model <- lm(`Total_Points` ~ `Expenses`, data = combined_data)
+summary(model)
+```
+
+This shows some data comparing the Big Ten school's athletic expenses to their total points on the Directors Cup's national grading system. The correlation is signifiant with a p-value of 0.01359 and a Adjusted R-squared of 0.3377. This is really important data when trying to find the correlation between Athletic Expenses and Athletics performances. 
+
+15.
+```{r}
+model <- lm(`Rank` ~ `Expenses`, data = combined_data)
+summary(model)
+```
+
+This shows some data comparing Big Ten schools national athletic rank to their athletic expenses. The comparison is much weaker than it is with total points, partially because Big Ten schools are still stronger than most national Division 1 schools despite their athletic spending. The p-value of 0.181 and adjusted R-squared of 0.06 suggests that this test is not statistically significant. 
+
+16
+```{r}
+model <- lm(`BigTen_Rank` ~ `Expenses`, data = combined_data)
+summary(model)
+```
+
+This shows data comparing Big Ten schools Big Ten rank to their athletic expenses. This has the highest correlation with a p-value of 0.007911 and a adjusted R-squared of 0.3866
+
+17
+```{r}
+multiple_regression_model <- lm(BigTen_Rank + Total_Points ~ Expenses, data = combined_data)
+summary(multiple_regression_model)
+```
+
+This shows a multiple regression model that compares the impact of expenses ot big ten rank and total points. The p-value is once again at aorund to 0.01 and the adjusted R-squared is at 0.3344 This all shows that there is a big link between the amount of athletic expenses for a school and their athletic performance. It is shown on bigger athletic big ten schools and smaller athleti big ten schools. 
 
 
 
+STORY PITCH: 
 
-Right now I have the data from the fall 2025-26 and winter 2025-26 NACDA Director's Cup Standings. I think that in the future when I am working with the data I might decide to go further back to collect more data. With winter_rankings and fall_rankings I will be able to filter out big ten teams and put together entire rankings to compare athletic programs. With the bigten_athletic_expenses I will be able to compare schools athletic expenses to their athletic program status as found with the winter_rankings and fall_rankings.
+The data between Directors Cup athletic rankings for Big Ten schools and their reported athletic expenses shows clear correlation between the amount of money that a team spends and their athletic success, and I do believe that these findings are newsworthy and significant. 
+
+Through my data I saw that there were correlations between the amount of expenses for each team and their total Directors Cup points with a p-value of 0.01359 and an adjusted R-squared of 0.3344. I found that there were correlations between the Big Ten Director Cup point rankings and the amount of expenses with a p-value of 0.007911 and an adjusted R-squared of 0.3866.
+
+Some potential problems with the findings is that there are two private schools in the Big Ten that have not disclosed FY25 athletic expenses, that being USC and Northwestern. Another problem is that Rutgers spends a lot of money and has been the worst team in the Big Ten.
+
+The way I want to approach this report would be to make a graph of each teams athletic expenses and then talk about each Big Ten schools results in the 2025-26 season. I think that I can bring up correlation percentages to each teams Big Ten rank and their expenses. I can explain that the findings are statistically significant. I can also look back in time to see if the findings are more consistent. I would also like to reach out to each teams athletic teams for comment on their athletic budget. 
